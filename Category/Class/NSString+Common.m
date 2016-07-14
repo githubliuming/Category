@@ -203,6 +203,14 @@
     }
     return NSNotFound;
 }
+
+- (NSString *)getUUID
+{
+    CFUUIDRef uuidObj = CFUUIDCreate(nil);
+    NSString *string = CFBridgingRelease(CFUUIDCreateString(nil, uuidObj));
+    CFRelease(uuidObj);
+    return string;
+}
 #pragma mark - 验证
 #define MaxEmailLength 254
 - (BOOL)isValidEmail

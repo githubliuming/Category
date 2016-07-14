@@ -73,6 +73,12 @@
  *  在指定位置截取指定长度的字符串
  */
 - (NSString *)stringAt:(NSInteger)index length:(NSInteger)length;
+/**
+ *  计算uuid
+ *
+ *  @return uuid字符串
+ */
+- (NSString *)getUUID;
 
 #pragma mark - 验证格式
 /**
