@@ -211,13 +211,13 @@
     CFRelease(uuidObj);
     return string;
 }
-- (NSString *)md5String
+- (NSString *)md5String_32
 {
     const char *cStr = [self UTF8String];
 
     unsigned char result[32];
 
-    unsigned char *k = CC_MD5(cStr, strlen(cStr), result);
+    CC_MD5(cStr, strlen(cStr), result);
 
     return [NSString stringWithFormat:
 
