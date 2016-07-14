@@ -80,6 +80,20 @@
  */
 - (NSString *)getUUID;
 
+/**
+ *  32位小写加密
+ *
+ *  @return
+ */
+- (NSString *)md5String_32;
+
+/**
+ *  16位大写加密
+ *
+ *  @return
+ */
+- (NSString *)md5String_16;
+
 #pragma mark - 验证格式
 /**
  *  验证邮箱格式
