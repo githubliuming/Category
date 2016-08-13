@@ -279,10 +279,5 @@
     BOOL isPhone = [phoneTest evaluateWithObject:self];
     return isPhone;
 }
-- (BOOL)isValidUrl
-{
-    NSString *regex = @"(http|https)://((\\w)*|([0-9]*)|([-|_])*)+([\\.|/]((\\w)*|([0-9]*)|([-|_])*))+";
-    NSPredicate *urlTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
-    return [urlTest evaluateWithObject:self];
-}
+
 @end

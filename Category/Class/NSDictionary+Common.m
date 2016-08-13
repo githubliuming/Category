@@ -152,17 +152,16 @@
 - (int)intForKey:(id<NSCopying>)key
 {
     id value = [self objectForKey:key];
-    if (value != nil && [value isKindOfClass:[NSNumber class]])
+    if (value != nil || [value respondsToSelector:@selector(intValue)])
     {
         return [value intValue];
     }
-
     return 0;
 }
 - (double)doubleForKey:(id<NSCopying>)key
 {
     id value = [self objectForKey:key];
-    if (value != nil && [value isKindOfClass:[NSNumber class]])
+    if (value != nil || [value respondsToSelector:@selector(doubleValue)])
     {
         return [value doubleValue];
     }
@@ -172,7 +171,7 @@
 - (float)floatForKey:(id<NSCopying>)key
 {
     id value = [self objectForKey:key];
-    if (value != nil && [value isKindOfClass:[NSNumber class]])
+    if (value != nil && [value respondsToSelector:@selector(floatValue)])
     {
         return [value floatValue];
     }
@@ -182,7 +181,7 @@
 - (long)longForKyey:(id<NSCopying>)key
 {
     id value = [self objectForKey:key];
-    if (value != nil && [value isKindOfClass:[NSNumber class]])
+    if (value != nil && [value respondsToSelector:@selector(integerValue)])
     {
         return [value integerValue];
     }
@@ -192,7 +191,7 @@
 - (long long)longlongForKey:(id<NSCopying>)key
 {
     id value = [self objectForKey:key];
-    if (value != nil && [value isKindOfClass:[NSNumber class]])
+    if (value != nil && [value respondsToSelector:@selector(longLongValue)])
     {
         return [value longLongValue];
     }
@@ -202,7 +201,7 @@
 - (unsigned long)ulongForKey:(id<NSCopying>)key
 {
     id value = [self objectForKey:key];
-    if (value != nil && [value isKindOfClass:[NSNumber class]])
+    if (value != nil && [value respondsToSelector:@selector(unsignedIntegerValue)])
     {
         return [value unsignedLongValue];
     }
@@ -213,7 +212,7 @@
 {
     id value = [self objectForKey:key];
 
-    if (value && [value isKindOfClass:[NSValue class]])
+    if (value && [value respondsToSelector:@selector(CGRectValue)])
     {
         return [value CGRectValue];
     }
@@ -224,7 +223,7 @@
 {
     id value = [self objectForKey:key];
 
-    if (value && [value isKindOfClass:[NSValue class]])
+    if (value && [value respondsToSelector:@selector(CGPointValue)])
     {
         return [value CGPointValue];
     }
@@ -235,7 +234,7 @@
 {
     id value = [self objectForKey:key];
 
-    if (value && [value isKindOfClass:[NSValue class]])
+    if (value && [value respondsToSelector:@selector(rangeValue)])
     {
         return [value rangeValue];
     }
@@ -246,7 +245,7 @@
 {
     id value = [self objectForKey:key];
 
-    if (value && [value isKindOfClass:[NSValue class]])
+    if (value && [value respondsToSelector:@selector(CGSizeValue)])
     {
         return [value CGSizeValue];
     }
@@ -256,19 +255,16 @@
 - (NSString *)stringForKey:(id<NSCopying>)key
 {
     id value = [self objectForKey:key];
+    NSString *result = [NSString emptyString];
     if (value != nil && [value isKindOfClass:[NSString class]])
     {
-        NSString *s = (NSString *)value;
-        if ([s isEmptyOrNil])
-        {
-            return [NSString emptyString];
-        }
-        else
-        {
-            return value;
-        }
+        result = value;
+    }
+    else if ([value respondsToSelector:@selector(stringValue)])
+    {
+        result = [value stringValue];
     }
 
-    return [NSString emptyString];
+    return result;
 }
 @end

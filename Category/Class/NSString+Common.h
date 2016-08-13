@@ -103,8 +103,7 @@
  *  验证手机格式
  */
 - (BOOL)isPhone;
-/**
- *  验证网络地址格式
- */
-- (BOOL)isValidUrl;
+
+
+
 @end
