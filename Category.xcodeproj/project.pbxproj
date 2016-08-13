@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A02A547F1D374B27007CBC08 /* NSNumber+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = A02A547E1D374B27007CBC08 /* NSNumber+Common.m */; };
+		A050D7CB1D5EBCE300F78634 /* NSString+URLHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A050D7CA1D5EBCE300F78634 /* NSString+URLHandler.m */; };
 		A0DC22261D35DD63008A63E8 /* NSArray+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DC22251D35DD63008A63E8 /* NSArray+Common.m */; };
 		A0DC22291D36011D008A63E8 /* NSDictionary+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DC22281D36011D008A63E8 /* NSDictionary+Common.m */; };
+		A0DC94CB1D518C2600366F3C /* UIView+Expand.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DC94CA1D518C2600366F3C /* UIView+Expand.m */; };
 		A0E3567D1D36638200B3FF9C /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E3567C1D36638200B3FF9C /* NSDate+Helper.m */; };
 		A0EAB13C1D34EA7E0052EE4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0EAB13B1D34EA7E0052EE4D /* main.m */; };
 		A0EAB13F1D34EA7E0052EE4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0EAB13E1D34EA7E0052EE4D /* AppDelegate.m */; };
@@ -23,10 +25,14 @@
 /* Begin PBXFileReference section */
 		A02A547D1D374B27007CBC08 /* NSNumber+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Common.h"; sourceTree = "<group>"; };
 		A02A547E1D374B27007CBC08 /* NSNumber+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Common.m"; sourceTree = "<group>"; };
+		A050D7C91D5EBCE300F78634 /* NSString+URLHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLHandler.h"; sourceTree = "<group>"; };
+		A050D7CA1D5EBCE300F78634 /* NSString+URLHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLHandler.m"; sourceTree = "<group>"; };
 		A0DC22241D35DD63008A63E8 /* NSArray+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Common.h"; sourceTree = "<group>"; };
 		A0DC22251D35DD63008A63E8 /* NSArray+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Common.m"; sourceTree = "<group>"; };
 		A0DC22271D36011D008A63E8 /* NSDictionary+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Common.h"; sourceTree = "<group>"; };
 		A0DC22281D36011D008A63E8 /* NSDictionary+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Common.m"; sourceTree = "<group>"; };
+		A0DC94C91D518C2600366F3C /* UIView+Expand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Expand.h"; sourceTree = "<group>"; };
+		A0DC94CA1D518C2600366F3C /* UIView+Expand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Expand.m"; sourceTree = "<group>"; };
 		A0E3567B1D36638200B3FF9C /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
 		A0E3567C1D36638200B3FF9C /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
 		A0EAB1371D34EA7D0052EE4D /* Category.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Category.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,12 +108,16 @@
 				A0E3567C1D36638200B3FF9C /* NSDate+Helper.m */,
 				A0EAB1551D34EBAC0052EE4D /* NSString+Common.h */,
 				A0EAB1561D34EBAC0052EE4D /* NSString+Common.m */,
+				A050D7C91D5EBCE300F78634 /* NSString+URLHandler.h */,
+				A050D7CA1D5EBCE300F78634 /* NSString+URLHandler.m */,
 				A0DC22241D35DD63008A63E8 /* NSArray+Common.h */,
 				A0DC22251D35DD63008A63E8 /* NSArray+Common.m */,
 				A0DC22271D36011D008A63E8 /* NSDictionary+Common.h */,
 				A0DC22281D36011D008A63E8 /* NSDictionary+Common.m */,
 				A02A547D1D374B27007CBC08 /* NSNumber+Common.h */,
 				A02A547E1D374B27007CBC08 /* NSNumber+Common.m */,
+				A0DC94C91D518C2600366F3C /* UIView+Expand.h */,
+				A0DC94CA1D518C2600366F3C /* UIView+Expand.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -183,10 +193,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0EAB1571D34EBAC0052EE4D /* NSString+Common.m in Sources */,
+				A0DC94CB1D518C2600366F3C /* UIView+Expand.m in Sources */,
 				A0DC22291D36011D008A63E8 /* NSDictionary+Common.m in Sources */,
 				A02A547F1D374B27007CBC08 /* NSNumber+Common.m in Sources */,
 				A0EAB1421D34EA7E0052EE4D /* ViewController.m in Sources */,
 				A0DC22261D35DD63008A63E8 /* NSArray+Common.m in Sources */,
+				A050D7CB1D5EBCE300F78634 /* NSString+URLHandler.m in Sources */,
 				A0EAB13F1D34EA7E0052EE4D /* AppDelegate.m in Sources */,
 				A0E3567D1D36638200B3FF9C /* NSDate+Helper.m in Sources */,
 				A0EAB13C1D34EA7E0052EE4D /* main.m in Sources */,
